@@ -3,8 +3,9 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.nullValue;
 
-class POST {
+class post {
     @Test
     void shouldReturnPostBody() {
         // Given - When - Then
@@ -18,7 +19,7 @@ class POST {
                 // Проверки
                 .then()
                 .statusCode(200)
-                .body("date", equalTo("data"))
+                .body("data", equalTo("some data"))
 
         ;
     }
